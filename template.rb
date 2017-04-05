@@ -16,6 +16,12 @@ application  do
   }
 end
 
+gem 'slim-rails'
+
+gem_group :development, :test do
+  gem 'awesome_print'
+end
+
 run 'bundle install --without production --path vendor/bundle'
 
 rake 'db:create'
