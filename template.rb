@@ -16,9 +16,9 @@ application  do
   }
 end
 
-gsub_file 'Gemfile', /\A.*web-console.*\z/ , ''
-gsub_file 'Gemfile', /\A.*byebug.*\z/ , ''
-gsub_file 'Gemfile', /\A.*jbuilder.*\z/ , ''
+gsub_file 'Gemfile', /^.*web-console.*$/ , ''
+gsub_file 'Gemfile', /^.*byebug.*$/ , ''
+gsub_file 'Gemfile', /^.*jbuilder.*$/ , ''
 
 gem 'slim-rails'
 
