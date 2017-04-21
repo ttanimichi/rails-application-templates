@@ -16,9 +16,19 @@ application  do
   }
 end
 
+gsub_file 'Gemfile', /\A.*web-console.*\z/ , ''
+gsub_file 'Gemfile', /\A.*byebug.*\z/ , ''
+gsub_file 'Gemfile', /\A.*jbuilder.*\z/ , ''
+
 gem 'slim-rails'
 
 gem_group :development, :test do
+  gem 'pry-doc'
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
+  gem 'binding_of_caller'
+  gem 'better_errors'
   gem 'awesome_print'
 end
 
