@@ -25,6 +25,7 @@ gsub_file 'Gemfile', /^.*therubyracer.*$/ , ''
 gem 'slim-rails'
 
 gem_group :development, :test do
+  gem 'dotenv-rails'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'pry-stack_explorer'
