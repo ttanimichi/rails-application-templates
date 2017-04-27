@@ -21,6 +21,7 @@ gsub_file 'Gemfile', /^.*byebug.*$/ , ''
 gsub_file 'Gemfile', /^.*jbuilder.*$/ , ''
 gsub_file 'Gemfile', /^.*coffee-rails.*$/ , ''
 gsub_file 'Gemfile', /^.*therubyracer.*$/ , ''
+gsub_file 'Gemfile', /^.*tzinfo-data.*$/ , ''
 
 gem 'slim-rails'
 
