@@ -32,6 +32,7 @@ gem_group :development, :test do
   gem 'pry-stack_explorer'
   gem 'binding_of_caller'
   gem 'better_errors'
+  gem 'view_source_map'
   gem 'awesome_print'
 end
 
