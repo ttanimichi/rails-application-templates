@@ -36,7 +36,7 @@ gem_group :development, :test do
   gem 'awesome_print'
 end
 
-run 'bundle install --without production --path vendor/bundle'
+run 'bundle install --without production'
 
 rake 'db:create'
 rake 'db:migrate'
