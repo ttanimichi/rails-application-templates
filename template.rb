@@ -20,8 +20,8 @@ end
 
 run 'bundle install --without production --path vendor/bundle'
 
-rails 'db:create'
-rails 'db:migrate'
+rake 'db:create'
+rake 'db:migrate'
 
 git :init
 git add: '.'
