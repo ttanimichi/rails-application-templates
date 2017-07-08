@@ -1,29 +1,12 @@
 run 'cp /dev/null README.md'
 run "echo '/vendor/bundle' >> .gitignore"
 
-application  do
-  %q{
-    config.time_zone = 'Tokyo'
-
-    config.generators do |generators|
-      generators.assets false
-      generators.helper false
-      generators.stylesheets false
-      generators.javascripts false
-    end
-
-    config.autoload_paths << "#{config.root}/app/services"  
-  }
-end
-
 gsub_file 'Gemfile', /^.*web-console.*$/ , ''
 gsub_file 'Gemfile', /^.*byebug.*$/ , ''
 gsub_file 'Gemfile', /^.*jbuilder.*$/ , ''
 gsub_file 'Gemfile', /^.*coffee-rails.*$/ , ''
 gsub_file 'Gemfile', /^.*therubyracer.*$/ , ''
 gsub_file 'Gemfile', /^.*tzinfo-data.*$/ , ''
-
-gem 'slim-rails'
 
 gem_group :development, :test do
   gem 'dotenv-rails'
